@@ -1,6 +1,7 @@
 package kr.hs.study.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -14,7 +15,7 @@ public class HomeController {
 	}
 	
 	//get 방슥으로 /test1으로 접속했을 때 콘솔에 test1 출력
-	@RequestMapping(value="/test1", method=RequestMethod.GET)
+	@GetMapping("/test1")
 	public String test1() {
 		System.out.println("test1");
 		return "test1";
